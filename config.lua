@@ -209,8 +209,6 @@ cfg.playerclass = playerclass
 -- SPECIAL CHARACTER CONDITIONS
 -----------------------------------
 if playername == 'Rothar' then
-	cfg.bars.bar1.uselayout2x6	= true
-	cfg.bars.bar2.uselayout2x6	= true
 	cfg.bars.stancebar.disable	= true
 end
 
