@@ -9,15 +9,12 @@ local bar = CreateFrame('Frame', 'rABS_MultiBarLeft', UIParent, 'SecureHandlerSt
 bar:SetHeight(barcfg.buttonsize * 12 + barcfg.buttonspacing * 11)
 bar:SetWidth(barcfg.buttonsize)
 bar:SetPoint(barcfg.pos.a1, barcfg.pos.af, barcfg.pos.a2, barcfg.pos.x, barcfg.pos.y)
-bar:SetHitRectInsets(-cfg.barinset, -cfg.barinset, -cfg.barinset, -cfg.barinset)
 
 if barcfg.testmode then
 	bar:SetBackdrop(cfg.backdrop)
 	bar:SetBackdropColor(1, 0.8, 1, 0.6)
 end
 bar:SetScale(barcfg.barscale)
-
-cfg.applyDragFunctionality(bar, barcfg.userplaced, barcfg.locked)
 
 MultiBarLeft:SetParent(bar)
 

@@ -18,7 +18,6 @@ if not barcfg.disable and cfg.playerclass == 'SHAMAN' then
 			bar:SetBackdrop(cfg.backdrop)
 			bar:SetBackdropColor(1, 0.8, 1, 0.6)
 		end
-		cfg.applyDragFunctionality(holder, barcfg.userplaced, barcfg.locked)
 
 		bar:SetParent(holder)
 		bar:SetAllPoints(holder)

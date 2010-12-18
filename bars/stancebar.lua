@@ -13,15 +13,12 @@ if not barcfg.disable then
 	bar:SetWidth(barcfg.buttonsize * num + barcfg.buttonspacing * (num - 1))
 	bar:SetHeight(barcfg.buttonsize)
 	bar:SetPoint(barcfg.pos.a1, barcfg.pos.af, barcfg.pos.a2, barcfg.pos.x, barcfg.pos.y)
-	bar:SetHitRectInsets(-cfg.barinset, -cfg.barinset, -cfg.barinset, -cfg.barinset)
 
 	if barcfg.testmode then
 		bar:SetBackdrop(cfg.backdrop)
 		bar:SetBackdropColor(1, 0.8, 1, 0.6)
 	end
 	bar:SetScale(barcfg.barscale)
-
-	cfg.applyDragFunctionality(bar, barcfg.userplaced, barcfg.locked)
 
 	ShapeshiftBarFrame:SetParent(bar)
 	ShapeshiftBarFrame:EnableMouse(false)

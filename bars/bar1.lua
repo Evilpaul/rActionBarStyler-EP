@@ -11,15 +11,12 @@ local bar = CreateFrame('Frame', 'rABS_MainMenuBar', UIParent, 'SecureHandlerSta
 bar:SetWidth(barcfg.buttonsize * 12 + barcfg.buttonspacing * 11)
 bar:SetHeight(barcfg.buttonsize)
 bar:SetPoint(barcfg.pos.a1, barcfg.pos.af, barcfg.pos.a2, barcfg.pos.x, barcfg.pos.y)
-bar:SetHitRectInsets(-cfg.barinset, -cfg.barinset, -cfg.barinset, -cfg.barinset)
 
 if barcfg.testmode then
 	bar:SetBackdrop(cfg.backdrop)
 	bar:SetBackdropColor(1, 0.8, 1, 0.6)
 end
 bar:SetScale(barcfg.barscale)
-
-cfg.applyDragFunctionality(bar, barcfg.userplaced, barcfg.locked)
 
 local Page = {
 	['DRUID'] = '[bonusbar:1,nostealth] 7; [bonusbar:1,stealth] %s; [bonusbar:2] 8; [bonusbar:3] 9; [bonusbar:4] 10;',

@@ -19,8 +19,6 @@ if not barcfg.disable then
 		bar:SetBackdropColor(1, 0.8, 1, 0.6)
 	end
 
-	cfg.applyDragFunctionality(bar, barcfg.userplaced, barcfg.locked)
-
 	local BagButtons = {
 		MainMenuBarBackpackButton,
 		CharacterBag0Slot,

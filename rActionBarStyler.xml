@@ -3,7 +3,6 @@
 
 	<Script file='config.lua'/>
 
-	<Script file='bars\slashcmd.lua'/>
 	<Script file='bars\hideblizz.lua'/>
 	<Script file='bars\bar1.lua'/>
 	<Script file='bars\bar2.lua'/>
