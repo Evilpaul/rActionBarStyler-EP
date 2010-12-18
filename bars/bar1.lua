@@ -8,18 +8,9 @@ local cfg = ns.cfg
 local barcfg = cfg.bars.bar1
 
 local bar = CreateFrame('Frame', 'rABS_MainMenuBar', UIParent, 'SecureHandlerStateTemplate')
-if barcfg.uselayout2x6 then
-	bar:SetWidth(barcfg.buttonsize * 6 + barcfg.buttonspacing * 5)
-	bar:SetHeight(barcfg.buttonsize * 2 + barcfg.buttonspacing)
-else
-	bar:SetWidth(barcfg.buttonsize * 12 + barcfg.buttonspacing * 11)
-	bar:SetHeight(barcfg.buttonsize)
-end
-if barcfg.uselayout2x6 then
-	bar:SetPoint(barcfg.pos.a1, barcfg.pos.af, barcfg.pos.a2, barcfg.pos.x - ((barcfg.buttonsize * 6 + barcfg.buttonspacing * 6) / 2), barcfg.pos.y)
-else
-	bar:SetPoint(barcfg.pos.a1, barcfg.pos.af, barcfg.pos.a2, barcfg.pos.x, barcfg.pos.y)
-end
+bar:SetWidth(barcfg.buttonsize * 12 + barcfg.buttonspacing * 11)
+bar:SetHeight(barcfg.buttonsize)
+bar:SetPoint(barcfg.pos.a1, barcfg.pos.af, barcfg.pos.a2, barcfg.pos.x, barcfg.pos.y)
 bar:SetHitRectInsets(-cfg.barinset, -cfg.barinset, -cfg.barinset, -cfg.barinset)
 
 if barcfg.testmode then
@@ -97,12 +88,7 @@ bar:SetScript('OnEvent', function(self, event, ...)
 				button:SetPoint('BOTTOMLEFT', bar, 0, 0)
 			else
 				local previous = _G['ActionButton' .. i - 1]
-				if barcfg.uselayout2x6 and i == 7 then
-					previous = _G['ActionButton1']
-					button:SetPoint('BOTTOMLEFT', previous, 'TOPLEFT', 0, barcfg.buttonspacing)
-				else
-					button:SetPoint('LEFT', previous, 'RIGHT', barcfg.buttonspacing, 0)
-				end
+				button:SetPoint('LEFT', previous, 'RIGHT', barcfg.buttonspacing, 0)
 			end
 		end
 	else
