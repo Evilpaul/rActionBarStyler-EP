@@ -4,17 +4,4 @@
 ## Title: rActionBarStyler
 ## Notes: Simple actionbars
 
-config.lua
-bars\slashcmd.lua
-bars\hideblizz.lua
-bars\bar1.lua
-bars\bar2.lua
-bars\bar3.lua
-bars\bar4.lua
-bars\bar5.lua
-bars\stancebar.lua
-bars\petbar.lua
-bars\totembar.lua
-bars\vehicleexit.lua
-bars\bags.lua
-bars\micromenu.lua
+rActionBarStyler.xml
