@@ -218,7 +218,7 @@ if playername == 'Rothar' then
 end
 
 --font
-cfg.font = 'FONTS\\FRIZQT__.ttf'
+cfg.font = [=[Interface\AddOns\rActionBarStyler\fonts\DroidSans.ttf]=]
 
 --how many pixels around a bar reserved for dragging?
 cfg.barinset = 10
