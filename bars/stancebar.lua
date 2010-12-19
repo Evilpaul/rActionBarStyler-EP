@@ -7,10 +7,8 @@ local barcfg = cfg.bars.stancebar
 
 if not barcfg.disable then
 
-	local num = NUM_SHAPESHIFT_SLOTS
-
 	local bar = CreateFrame('Frame', 'rABS_StanceBar', UIParent, 'SecureHandlerStateTemplate')
-	bar:SetWidth(barcfg.buttonsize * num + barcfg.buttonspacing * (num - 1))
+	bar:SetWidth(barcfg.buttonsize * NUM_SHAPESHIFT_SLOTS + barcfg.buttonspacing * (NUM_SHAPESHIFT_SLOTS - 1))
 	bar:SetHeight(barcfg.buttonsize)
 	bar:SetPoint(barcfg.pos.a1, barcfg.pos.af, barcfg.pos.a2, barcfg.pos.x, barcfg.pos.y)
 
@@ -23,7 +21,7 @@ if not barcfg.disable then
 	ShapeshiftBarFrame:SetParent(bar)
 	ShapeshiftBarFrame:EnableMouse(false)
 
-	for i = 1, num do
+	for i = 1, NUM_SHAPESHIFT_SLOTS do
 		local button = _G['ShapeshiftButton' .. i]
 		button:SetSize(barcfg.buttonsize, barcfg.buttonsize)
 		button:ClearAllPoints()
@@ -44,7 +42,7 @@ if not barcfg.disable then
 	if barcfg.showonmouseover then
 		local function lighton(alpha)
 			if ShapeshiftBarFrame:IsShown() then
-				for i = 1, num do
+				for i = 1, NUM_SHAPESHIFT_SLOTS do
 					local pb = _G['ShapeshiftButton' .. i]
 					pb:SetAlpha(alpha)
 				end
@@ -57,7 +55,7 @@ if not barcfg.disable then
 		bar:SetScript('OnLeave', function(self)
 			lighton(0)
 		end)
-		for i = 1, num do
+		for i = 1, NUM_SHAPESHIFT_SLOTS do
 			local pb = _G['ShapeshiftButton' .. i]
 			pb:SetAlpha(0)
 			pb:HookScript('OnEnter', function(self)

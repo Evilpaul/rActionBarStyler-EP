@@ -7,10 +7,8 @@ local barcfg = cfg.bars.petbar
 
 if not barcfg.disable then
 
-	local num = NUM_PET_ACTION_SLOTS
-
 	local bar = CreateFrame('Frame', 'rABS_PetBar', UIParent, 'SecureHandlerStateTemplate')
-	bar:SetWidth(barcfg.buttonsize * num + barcfg.buttonspacing * (num - 1))
+	bar:SetWidth(barcfg.buttonsize * NUM_PET_ACTION_SLOTS + barcfg.buttonspacing * (NUM_PET_ACTION_SLOTS - 1))
 	bar:SetHeight(barcfg.buttonsize)
 	bar:SetPoint(barcfg.pos.a1, barcfg.pos.af, barcfg.pos.a2, barcfg.pos.x, barcfg.pos.y)
 
@@ -23,7 +21,7 @@ if not barcfg.disable then
 	PetActionBarFrame:SetParent(bar)
 	PetActionBarFrame:EnableMouse(false)
 
-	for i = 1, num do
+	for i = 1, NUM_PET_ACTION_SLOTS do
 		local button = _G['PetActionButton' .. i]
 		local cd = _G['PetActionButton' .. i .. 'Cooldown']
 		button:SetSize(barcfg.buttonsize, barcfg.buttonsize)
@@ -40,7 +38,7 @@ if not barcfg.disable then
 	if barcfg.showonmouseover then
 		local function lighton(alpha)
 			if PetActionBarFrame:IsShown() then
-				for i = 1, num do
+				for i = 1, NUM_PET_ACTION_SLOTS do
 					local pb = _G['PetActionButton' .. i]
 					pb:SetAlpha(alpha)
 				end
@@ -53,7 +51,7 @@ if not barcfg.disable then
 		bar:SetScript('OnLeave', function(self)
 			lighton(0)
 		end)
-		for i = 1, num do
+		for i = 1, NUM_PET_ACTION_SLOTS do
 			local pb = _G['PetActionButton' .. i]
 			pb:SetAlpha(0)
 			pb:HookScript('OnEnter', function(self)

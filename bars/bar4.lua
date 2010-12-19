@@ -6,7 +6,7 @@ local cfg = ns.cfg
 local barcfg = cfg.bars.bar4
 
 local bar = CreateFrame('Frame', 'rABS_MultiBarRight', UIParent, 'SecureHandlerStateTemplate')
-bar:SetHeight(barcfg.buttonsize * 12 + barcfg.buttonspacing * 11)
+bar:SetHeight(barcfg.buttonsize * NUM_MULTIBAR_BUTTONS + barcfg.buttonspacing * (NUM_MULTIBAR_BUTTONS - 1))
 bar:SetWidth(barcfg.buttonsize)
 bar:SetPoint(barcfg.pos.a1, barcfg.pos.af, barcfg.pos.a2, barcfg.pos.x, barcfg.pos.y)
 
@@ -18,7 +18,7 @@ bar:SetScale(barcfg.barscale)
 
 MultiBarRight:SetParent(bar)
 
-for i = 1, 12 do
+for i = 1, NUM_MULTIBAR_BUTTONS do
 	local button = _G['MultiBarRightButton' .. i]
 	button:ClearAllPoints()
 	button:SetSize(barcfg.buttonsize, barcfg.buttonsize)
@@ -33,7 +33,7 @@ end
 if barcfg.showonmouseover then
 	local function lighton(alpha)
 		if MultiBarRight:IsShown() then
-			for i = 1, 12 do
+			for i = 1, NUM_MULTIBAR_BUTTONS do
 				local pb = _G['MultiBarRightButton' .. i]
 				pb:SetAlpha(alpha)
 			end
@@ -46,7 +46,7 @@ if barcfg.showonmouseover then
 	bar:SetScript('OnLeave', function(self)
 		lighton(0)
 	end)
-	for i = 1, 12 do
+	for i = 1, NUM_MULTIBAR_BUTTONS do
 		local pb = _G['MultiBarRightButton' .. i]
 		pb:SetAlpha(0)
 		pb:HookScript('OnEnter', function(self)

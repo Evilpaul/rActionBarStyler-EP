@@ -8,7 +8,7 @@ local cfg = ns.cfg
 local barcfg = cfg.bars.bar1
 
 local bar = CreateFrame('Frame', 'rABS_MainMenuBar', UIParent, 'SecureHandlerStateTemplate')
-bar:SetWidth(barcfg.buttonsize * 12 + barcfg.buttonspacing * 11)
+bar:SetWidth(barcfg.buttonsize * NUM_ACTIONBAR_BUTTONS + barcfg.buttonspacing * (NUM_ACTIONBAR_BUTTONS - 1))
 bar:SetHeight(barcfg.buttonsize)
 bar:SetPoint(barcfg.pos.a1, barcfg.pos.af, barcfg.pos.a2, barcfg.pos.x, barcfg.pos.y)
 
@@ -59,12 +59,12 @@ bar:SetScript('OnEvent', function(self, event, ...)
 			self:SetFrameRef('ActionButton' .. i, button)
 		end
 
-		self:Execute([[
+		self:Execute(([[
 			buttons = table.new()
-			for i = 1, 12 do
+			for i = 1, %d do
 				table.insert(buttons, self:GetFrameRef('ActionButton' .. i))
 			end
-		]])
+		]]):format(NUM_ACTIONBAR_BUTTONS))
 
 		self:SetAttribute('_onstate-page', [[
 			for i, button in ipairs(buttons) do
@@ -76,7 +76,7 @@ bar:SetScript('OnEvent', function(self, event, ...)
 	elseif event == 'PLAYER_ENTERING_WORLD' then
 		MainMenuBar_UpdateKeyRing()
 		local button
-		for i = 1, 12 do
+		for i = 1, NUM_ACTIONBAR_BUTTONS do
 			button = _G['ActionButton' .. i]
 			button:SetSize(barcfg.buttonsize, barcfg.buttonsize)
 			button:ClearAllPoints()
