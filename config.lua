@@ -124,11 +124,11 @@ cfg.bars = {
 		barscale	= 1,
 		showonmouseover = true,
 		pos		= {
-			a1 = 'TOP',
-			a2 = 'TOP',
+			a1 = 'BOTTOMRIGHT',
+			a2 = 'BOTTOMRIGHT',
 			af = 'UIParent',
 			x = 0,
-			y = -5
+			y = 75
 		},
 		testmode	= false,
 		disable		= false,
@@ -140,8 +140,8 @@ cfg.bars = {
 			a1 = 'BOTTOMRIGHT',
 			a2 = 'BOTTOMRIGHT',
 			af = 'UIParent',
-			x = -10,
-			y = 10
+			x = 0,
+			y = 25
 		},
 		testmode	= false,
 		disable		= false,
