@@ -8,7 +8,7 @@ local barcfg = cfg.bars.micromenu
 if not barcfg.disable then
 
 	local bar = CreateFrame('Frame', 'rABS_MicroMenu', UIParent, 'SecureHandlerStateTemplate')
-	bar:SetWidth(255)
+	bar:SetWidth(300)
 	bar:SetHeight(40)
 	bar:SetPoint(barcfg.pos.a1, barcfg.pos.af, barcfg.pos.a2, barcfg.pos.x, barcfg.pos.y)
 
@@ -28,8 +28,10 @@ if not barcfg.disable then
 		GuildMicroButton,
 		PVPMicroButton,
 		LFDMicroButton,
-		MainMenuMicroButton,
+		EJMicroButton,
+		RaidMicroButton,
 		HelpMicroButton,
+		MainMenuMicroButton,
 	}
 
 	local function movebuttons()
