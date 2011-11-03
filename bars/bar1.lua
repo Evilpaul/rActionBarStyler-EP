@@ -74,7 +74,6 @@ bar:SetScript('OnEvent', function(self, event, ...)
 
 		RegisterStateDriver(self, 'page', GetBar())
 	elseif event == 'PLAYER_ENTERING_WORLD' then
-		MainMenuBar_UpdateKeyRing()
 		local button
 		for i = 1, NUM_ACTIONBAR_BUTTONS do
 			button = _G['ActionButton' .. i]
