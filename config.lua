@@ -22,153 +22,153 @@ local cfg = CreateFrame('Frame')
 
 cfg.bars = {
 	bar1 = {
-		buttonsize	= 26,
-		buttonspacing	= 5,
-		barscale	= 1,
-		pos		= {
+		buttonsize = 26,
+		buttonspacing = 5,
+		barscale = 1,
+		pos = {
 			a1 = 'BOTTOM',
 			a2 = 'BOTTOM',
 			af = 'UIParent',
 			x = -1,
 			y = 22
 		},
-		testmode	= false,
+		testmode = false,
 	},
 	bar2 = {
-		buttonsize	= 26,
-		buttonspacing	= 5,
-		barscale	= 1,
+		buttonsize = 26,
+		buttonspacing = 5,
+		barscale = 1,
 		showonmouseover = false,
-		pos		= {
+		pos = {
 			a1 = 'BOTTOM',
 			a2 = 'BOTTOM',
 			af = 'UIParent',
 			x = -1,
 			y = 53
 		},
-		testmode	= false,
+		testmode = false,
 	},
 	bar3 = {
-		buttonsize	= 26,
-		buttonspacing	= 5,
-		barscale	= 1,
-		showonmouseover	= false,
-		pos		= {
+		buttonsize = 26,
+		buttonspacing = 5,
+		barscale = 1,
+		showonmouseover = false,
+		pos = {
 			a1 = 'BOTTOM',
 			a2 = 'BOTTOM',
 			af = 'UIParent',
 			x = -1,
 			y = 92
 		},
-		testmode	= false,
+		testmode = false,
 	},
 	bar4 = {
-		buttonsize	= 26,
-		buttonspacing	= 5,
-		barscale	= 1,
+		buttonsize = 26,
+		buttonspacing = 5,
+		barscale = 1,
 		showonmouseover = true,
-		pos		= {
+		pos = {
 			a1 = 'RIGHT',
 			a2 = 'RIGHT',
 			af = 'UIParent',
 			x = -10,
 			y = 0
 		},
-		testmode	= false,
+		testmode = false,
 	},
 	bar5 = {
-		buttonsize	= 26,
-		buttonspacing	= 5,
-		barscale	= 1,
+		buttonsize = 26,
+		buttonspacing = 5,
+		barscale = 1,
 		showonmouseover = true,
-		pos		= {
+		pos = {
 			a1 = 'RIGHT',
 			a2 = 'RIGHT',
 			af = 'UIParent',
 			x = -46,
 			y = 0
 		},
-		testmode	= false,
+		testmode = false,
 	},
 	stancebar = {
-		buttonsize	= 26,
-		buttonspacing	= 5,
-		barscale	= 1,
+		buttonsize = 26,
+		buttonspacing = 5,
+		barscale = 1,
 		showonmouseover = false,
-		pos		= {
+		pos = {
 			a1 = 'BOTTOM',
 			a2 = 'BOTTOM',
 			af = 'UIParent',
 			x = -1,
 			y = 140
 		},
-		testmode	= false,
-		disable		= false,
+		testmode = false,
+		disable = false,
 	},
 	petbar = {
-		buttonsize	= 26,
-		buttonspacing	= 5,
-		barscale	= 1,
+		buttonsize = 26,
+		buttonspacing = 5,
+		barscale = 1,
 		showonmouseover = false,
-		pos		= {
+		pos = {
 			a1 = 'BOTTOM',
 			a2 = 'BOTTOM',
 			af = 'UIParent',
 			x = -1,
 			y = 140
 		},
-		testmode	= false,
-		disable		= false,
+		testmode = false,
+		disable = false,
 	},
 	micromenu = {
-		barscale	= 1,
+		barscale = 1,
 		showonmouseover = true,
-		pos		= {
+		pos = {
 			a1 = 'BOTTOMRIGHT',
 			a2 = 'BOTTOMRIGHT',
 			af = 'UIParent',
 			x = 0,
 			y = 75
 		},
-		testmode	= false,
-		disable		= false,
+		testmode = false,
+		disable = false,
 	},
 	bags = {
-		barscale	= 1,
+		barscale = 1,
 		showonmouseover = true,
-		pos		= {
+		pos = {
 			a1 = 'BOTTOMRIGHT',
 			a2 = 'BOTTOMRIGHT',
 			af = 'UIParent',
 			x = 0,
 			y = 25
 		},
-		testmode	= false,
-		disable		= false,
+		testmode = false,
+		disable = false,
 	},
 	totembar = {
-		barscale	= 1,
-		pos		= {
+		barscale = 1,
+		pos = {
 			a1 = 'BOTTOM',
 			a2 = 'BOTTOM',
 			af = 'UIParent',
 			x = -1,
 			y = 140
 		},
-		testmode	= false,
-		disable		= false,
+		testmode = false,
+		disable = false,
 	},
 	vehicleexit = {
-		buttonsize	= 36,
-		barscale	= 1,
-		pos		= {
+		buttonsize = 36,
+		barscale = 1,
+		pos = {
 			a1 = 'BOTTOM',
 			a2 = 'BOTTOM',
 			af = 'UIParent',
 			x = 210,
 			y = 135
 		},
-		testmode	= false,
+		testmode = false,
 	},
 }
 
@@ -187,7 +187,7 @@ cfg.playerclass = playerclass
 -- SPECIAL CHARACTER CONDITIONS
 -----------------------------------
 if playername == 'Rothar' then
-	cfg.bars.stancebar.disable	= true
+	cfg.bars.stancebar.disable = true
 end
 
 --font
