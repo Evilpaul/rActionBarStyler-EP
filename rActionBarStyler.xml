@@ -15,4 +15,5 @@
 	<Script file='bars\vehicleexit.lua'/>
 	<Script file='bars\bags.lua'/>
 	<Script file='bars\micromenu.lua'/>
+	<Script file='bars\extrabar.lua'/>
 </Ui>

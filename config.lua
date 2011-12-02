@@ -120,6 +120,21 @@ cfg.bars = {
 		testmode = false,
 		disable = false,
 	},
+	extrabar = {
+		buttonsize = 36,
+		buttonspacing = 5,
+		barscale = 1,
+		showonmouseover = false,
+		pos = {
+			a1 = 'BOTTOM',
+			a2 = 'BOTTOM',
+			af = 'UIParent',
+			x = -210,
+			y = 140
+		},
+		testmode = false,
+		disable = false,
+	},
 	micromenu = {
 		barscale = 1,
 		showonmouseover = true,
