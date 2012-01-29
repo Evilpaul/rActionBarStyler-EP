@@ -19,6 +19,7 @@ if not barcfg.disable and cfg.playerclass == 'SHAMAN' then
 			bar:SetBackdropColor(1, 0.8, 1, 0.6)
 		end
 
+		bar.ignoreFramePositionManager = true
 		bar:SetParent(holder)
 		bar:SetAllPoints(holder)
 
