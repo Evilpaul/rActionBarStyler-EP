@@ -204,6 +204,9 @@ cfg.playerclass = playerclass
 if playername == 'Rothar' then
 	cfg.bars.stancebar.disable = true
 end
+if playerclass == 'WARLOCK' then
+	cfg.bars.stancebar.disable = true
+end
 
 --font
 cfg.font = [=[Interface\AddOns\rActionBarStyler\fonts\DroidSans.ttf]=]
